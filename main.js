@@ -2,9 +2,11 @@
 
 const help = [
     'whois          Who is Vishrut?',
+    'whoami         Display current user',
     'projects       View coding projects',
     'socials        Display socials',
-    'secret         Can you guess the password?'
+    'clear          Clear the terminal',
+    'history        Display command history',
 ]
 
 const socials = [
