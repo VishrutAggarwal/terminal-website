@@ -1,27 +1,27 @@
 /** VARIABLES */
 
 const help = [
-    'whois          Who is Vishrut?',
-    'whoami         Display current user',
-    'projects       View coding projects',
-    'socials        Display socials',
-    'clear          Clear the terminal',
-    'history        Display command history',
+    '<span class="command">whois</span><span class="tabspace">               </span><span class="secondary-text">Who is Vishrut?',
+    '<span class="command">whoami</span><span class="tabspace">              </span><span class="secondary-text">Display current user',
+    '<span class="command">projects</span><span class="tabspace">            </span><span class="secondary-text">View coding projects',
+    '<span class="command">socials</span><span class="tabspace">             </span><span class="secondary-text">Display socials',
+    '<span class="command">clear</span><span class="tabspace">               </span><span class="secondary-text">Clear the terminal',
+    '<span class="command">history</span><span class="tabspace">             </span><span class="secondary-text">Display command history',
 ]
 
 const socials = [
-    'github         github.com/vishrutaggarwal',
-    'linkedin       linkedin.com/in/vishrut-aggarwal',
-    'twitter        twitter.com/aggarwalvishrut'
+    '<span class="primary-text">github</span><span class="tabspace">              </span><span class="secondary-text">github.com/vishrutaggarwal</span>',
+    '<span class="primary-text">linkedin</span><span class="tabspace">            </span><span class="secondary-text">linkedin.com/in/vishrut-aggarwal</span>',
+    '<span class="primary-text">twitter</span><span class="tabspace">             </span><span class="secondary-text">twitter.com/aggarwalvishrut</span>'
 ]
 
 const projects = [
-    'Terminal Website           A portofolio website in the form of a terminal',
-    'Space Invaders             A space invaders game made in python using pygame'
+    '<span class="primary-text">Terminal Website</span><span class="tabspace">    </span><span class="secondary-text">A portofolio website in the form of a terminal</span>',
+    '<span class="primary-text">Space Invaders</span><span class="tabspace">      </span><span class="secondary-text">A space invaders game made in python using pygame</span>'
 ]
 
 const whois = 'Vishrut Aggarwal is a software developer from India.\n He is passionate about building solutions that makes a difference.\n His skill repoirtoire includes Web Development, Software Automation,\n Data Science and Game Development.'
-const prompt = '<span id="prompt">guest@vishrut:~$ </span>';
+const prompt = '<span id="prompt" class="top-margin">guest@vishrut:~$ </span>';
 
 output = document.getElementById('terminal-output');
 const history = new Array();
@@ -38,6 +38,10 @@ function command(cmd) {
 
         case 'clear':
             output.innerHTML = '';
+            break;
+
+        case 'banner':
+            // output.innerHTML = '';
             break;
 
         case 'whois':
@@ -87,12 +91,12 @@ function checkForEnter(e, Object) {
         Object.value = '';
 
         e.preventDefault()
-        display(prompt + text)
+        display(prompt + '<span class="tabspace"> </span>' + '<span class="terminal-text">' + text + '</span>')
 
         is_command = command(text);
 
         if (is_command) {
-            history.push(text);
+            history.push('<span class="command">' + text + '</span>');
         } else {
             display("Command not found. Type 'help' for a list of commands.")
         }

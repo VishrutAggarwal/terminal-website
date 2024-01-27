@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* VARIABLES */
+
+    /* Font */
+    --font-family: monospace;
+
+    /* Colors */
+    --color-background: #000;
+    --color-prompt: #0f0;
+    --color-command: #0ff;
+    --color-output-primary: #fff;
+    --color-output-secondary: #a4a4a4;
+    --color-input: #ff0;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-output-primary);
+    font-family: var(--font-family);
+}
+
+.banner {
+    white-space: pre;
+    margin: 2rem 1rem;
+}
+
+.tabspace {
+    white-space: pre;
+}
+
+#terminal-box {
+    display: flex;
+    align-items: center;
+}
+
+#terminal {
+    border-style: none; 
+    border-color: Transparent; 
+    overflow: auto; 
+    outline: none;
+    resize: none;
+    background: var(--color-background);
+    margin-top: 1rem;
+}
+
+.terminal-text {
+    color: var(--color-input);
+}
+
+.top-margin {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.command {
+    color: var(--color-command);
+}
+
+#prompt {
+    color: var(--color-prompt);
+}
+
+.primary-text {
+    color: var(--color-output-primary);
+}
+
+.secondary-text {
+    color: var(--color-output-secondary);
+}
