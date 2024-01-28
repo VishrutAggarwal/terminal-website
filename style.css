@@ -9,18 +9,39 @@
     --font-family: monospace;
 
     /* Colors */
-    --color-background: #000;
+    /* --color-background: #000;
     --color-prompt: #0f0;
     --color-command: #0ff;
     --color-output-primary: #fff;
     --color-output-secondary: #a4a4a4;
-    --color-input: #ff0;
+    --color-input: #ff0; */
 }
 
 body {
     background-color: var(--color-background);
     color: var(--color-output-primary);
     font-family: var(--font-family);
+    padding: 1.8rem;
+    border: 5px solid var(--color-output-secondary);
+    margin: 0.3rem;
+    min-height: 98.5vh;
+}
+
+a:link { 
+    text-decoration: none; 
+}
+
+a:visited { 
+    text-decoration: none; 
+}
+
+a:hover { 
+    text-decoration: underline;
+    color: var(--color-output-primary); 
+}
+
+a:active { 
+    text-decoration: none; 
 }
 
 .banner {
@@ -45,6 +66,7 @@ body {
     resize: none;
     background: var(--color-background);
     margin-top: 1rem;
+    caret: var(--color-input) underscore;
 }
 
 .terminal-text {
