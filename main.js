@@ -11,7 +11,7 @@ const themes ={
         'colorOutputSecondary': '#A4A4A4',
         'colorInput': '#FFFF00'
     },
-    'day': {
+    'light': {
         'colorBackground': '#F7F7F7',
         'colorPrompt': '#090300',
         'colorCommand': '#DB2D20',
@@ -19,13 +19,77 @@ const themes ={
         'colorOutputSecondary': '#B5E4F4',
         'colorInput': '#01A252'
     },
-    'night': {
+    'dark': {
         'colorBackground': '#090300',
         'colorPrompt': '#A5A2A2',
         'colorCommand': '#DB2D20',
         'colorOutputPrimary': '#A16A94',
         'colorOutputSecondary': '#A5A2A2',
         'colorInput': '#01A252'
+    },
+    'summerday': {
+        'colorBackground': '#f8f3ca',
+        'colorPrompt': '#ffa3a2',
+        'colorCommand': '#c4b441',
+        'colorOutputPrimary': '#f27a5f',
+        'colorOutputSecondary': '#fcdd95',
+        'colorInput': '#8ee6a1'
+    },
+    'summernight': {
+        'colorBackground': '#213756',
+        'colorPrompt': '#da6175',
+        'colorCommand': '#73841b',
+        'colorOutputPrimary': '#c8cdbb',
+        'colorOutputSecondary': '#7da497',
+        'colorInput': '#a5c19b'
+    },
+    'winterday': {
+        'colorBackground': '#d6e1e9',
+        'colorPrompt': '#d17b73',
+        'colorCommand': '#458282',
+        'colorOutputPrimary': '#458282',
+        'colorOutputSecondary': '#458282',
+        'colorInput': '#458282'
+    },
+    'winternight': {
+        'colorBackground': '#20284e',
+        'colorPrompt': '#a84a5e',
+        'colorCommand': '#ed987c',
+        'colorOutputPrimary': '#9ec6c9',
+        'colorOutputSecondary': '#69809e',
+        'colorInput': '#649e91'
+    },
+    'springday': {
+        'colorBackground': '#cef1ff',
+        'colorPrompt': '#e13a6a',
+        'colorCommand': '#ff4adc',
+        'colorOutputPrimary': '#3dff98',
+        'colorOutputSecondary': '#3df9ea',
+        'colorInput': '#738d9d'
+    },
+    'springnight': {
+        'colorBackground': '#0e0e0e',
+        'colorPrompt': '#f50078',
+        'colorCommand': '#8e1cc7',
+        'colorOutputPrimary': '#0aff52',
+        'colorOutputSecondary': '#00f7ff',
+        'colorInput': '#4e6ea8'
+    },
+    'autumnday': {
+        'colorBackground': '#ffd5cc',
+        'colorPrompt': '#ff4764',
+        'colorCommand': '#c70083',
+        'colorOutputPrimary': '#e04f0b',
+        'colorOutputSecondary': '#ff9393',
+        'colorInput': '#00cf2d'
+    },
+    'autumnnight': {
+        'colorBackground': '#00033c',
+        'colorPrompt': '#ad005f',
+        'colorCommand': '#8e1cc7',
+        'colorOutputPrimary': '#00bbff',
+        'colorOutputSecondary': '#00228f',
+        'colorInput': '#48ff00'
     },
 }
 
@@ -100,6 +164,7 @@ const errors = [
 
 const help = [
     '<span class="command">banner</span><span class="tabspace">              </span><span class="secondary-text">Display banner. Range: 1-3',
+    'span class="command">theme</span><span class="tabspace">                </span><span class="secondary-text">Change theme.',
     '<span class="command">whois</span><span class="tabspace">               </span><span class="secondary-text">Who is Vishrut?',
     '<span class="command">whoami</span><span class="tabspace">              </span><span class="secondary-text">Display current user',
     '<span class="command">projects</span><span class="tabspace">            </span><span class="secondary-text">View coding projects',
@@ -160,14 +225,46 @@ const history = new Array();
 function changeTheme(theme) {
 
     switch(theme) {
-        case 'day':
-            newTheme = themes.day;
+        case 'light':
+            newTheme = themes.light;
             break;
 
-        case 'night':
-            newTheme = themes.night;
+        case 'dark':
+            newTheme = themes.dark;
+            break;
+
+        case 'summerday':
+            newTheme = themes.summerday;
             break;
         
+        case 'summernight':
+            newTheme = themes.summernight;
+            break;
+
+        case 'winterday':
+            newTheme = themes.winterday;
+            break;
+
+        case 'winternight':
+            newTheme = themes.winternight;
+            break;
+
+        case 'springday':
+            newTheme = themes.springday;
+            break;
+
+        case 'springnight':
+            newTheme = themes.springnight;
+            break;
+
+        case 'autumnday':
+            newTheme = themes.autumnday;
+            break;
+
+        case 'autumnnight':
+            newTheme = themes.autumnnight;
+            break;
+
         default:
             newTheme = themes.default;
             break;
