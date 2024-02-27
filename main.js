@@ -164,7 +164,7 @@ const errors = [
 
 const help = [
     '<span class="command">banner</span><span class="tabspace">              </span><span class="secondary-text">Display banner. Range: 1-3',
-    'span class="command">theme</span><span class="tabspace">                </span><span class="secondary-text">Change theme.',
+    '<span class="command">theme</span><span class="tabspace">                </span><span class="secondary-text">Change theme.',
     '<span class="command">whois</span><span class="tabspace">               </span><span class="secondary-text">Who is Vishrut?',
     '<span class="command">whoami</span><span class="tabspace">              </span><span class="secondary-text">Display current user',
     '<span class="command">projects</span><span class="tabspace">            </span><span class="secondary-text">View coding projects',
